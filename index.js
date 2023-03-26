@@ -14,11 +14,11 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
-// app.get("/", (req,res)=> {
+app.get("/", (req,res)=> {
 
-//        res.setHeader("Access-Control-allow-Credentials", "true");
-//        res.send("API is running");
-// })
+       res.setHeader("Access-Control-allow-Credentials", "true");
+       res.send("API is running");
+})
 
 app.use("/user", userRoutes);
 app.use("/questions", questionRoutes);
